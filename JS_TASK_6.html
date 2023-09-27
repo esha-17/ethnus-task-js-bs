@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instagram Login</title>
+  <style>
+    /* Add your CSS styling here */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Instagram</h1>
+
+    <form action="#" method="post" id="login-form">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" value="Log in">
+    </form>
+
+    <a href="#">Forgot password?</a>
+    <a href="#">Sign up</a>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('login-form');
+    loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+   // Get the username and password from the form.
+   const username = loginForm.querySelector('input[name="username"]').value;
+   const password = loginForm.querySelector('input[name="password"]').value;
+
+  // Validate the credentials.
+  if (username !== 'test' || password !== 'password') {
+    // Display an error message.
+    alert('Incorrect username or password.');
+
+    // Prevent the form from submitting.
+    return;
+  }
+
+  // Submit the form.
+  loginForm.submit();
+  });
+  </script>
+</body>
+</html>
